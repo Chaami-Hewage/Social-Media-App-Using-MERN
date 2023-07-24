@@ -28,9 +28,6 @@ const UserSchema = new mongoose.Schema(
         picturePath: {
             type: String,
             default: "",
-            required: true,
-            max: 50,
-            unique: true,
         },
         friends: {
             type: Array,
@@ -41,7 +38,7 @@ const UserSchema = new mongoose.Schema(
         viewedProfile: Number,
         impressions: Number,
     },
-    { timestamps: true }
+    {timestamps: true}
 );
 
 const User = mongoose.model("User", UserSchema);
